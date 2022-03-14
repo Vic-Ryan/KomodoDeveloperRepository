@@ -212,6 +212,7 @@ namespace DevTeams_Challenge_Console
                 case "false":
                 case "n":
                 case "no":
+                default:
                     developer.PluralsightAccess = false;
                     break;
             }
@@ -229,6 +230,7 @@ namespace DevTeams_Challenge_Console
         private void UpdateDeveloperInfo()
         {
             Console.Clear();
+            Developer newDev = new Developer();
             ListDevelopersByID();
             Console.Write("Please enter the ID of the Developer you wish to update: ");
             Developer oldInfo = _devTeamRepo.GetDevByID(int.Parse(Console.ReadLine()));
