@@ -43,33 +43,7 @@ namespace DevTeams_Challenge_Repository
         public DevTeam GetDevTeamByName(string teamName)
         {
             return _devTeamDirectory.Where(d => d.TeamName == teamName).SingleOrDefault();
-        }
-
-        //public DevTeam DisplayDevTeamMembers()
-        ///{
-        // List<Developer> allDevelopers = new List<Developer>();
-        // foreach (Developer developer in _developers)
-        // {
-        //     if
-        // }
-        // }
-        //}
-        // U
-
-
-       /*
-        public bool RemoveDeveloperFromTeamById(int devId, int teamId)
-        {
-            DevTeam dTeam = GetDevTeamById(teamId);
-            Developer dev = dTeam.Developers.Where(d => d.DevID == devId).SingleOrDefault();
-            if (dev != default)
-            {
-                return dTeam.Developers.Remove(dev);
-            }
-            else
-                return false;
-        }
-        */ 
+        } 
         public bool RemoveDeveloperToTeamByID(int devId, int teamId)
         {
             Developer developer = GetDevByID(devId);
